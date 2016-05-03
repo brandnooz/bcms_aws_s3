@@ -24,13 +24,13 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<aws-sdk>, [">= 1.5.0"])
-      s.add_runtime_dependency(%q<browsercms>, ["< 3.6.0", ">= 3.5.0.rc1"])
+      s.add_runtime_dependency(%q<browsercms>, ["< 4.1.0", ">= 3.5.0.rc1"])
     else
       s.add_dependency(%q<aws-sdk>, [">= 1.5.0"])
-      s.add_dependency(%q<browsercms>, ["< 3.6.0", ">= 3.5.0.rc1"])
+      s.add_dependency(%q<browsercms>, ["< 4.1.0", ">= 3.5.0.rc1"])
     end
   else
     s.add_dependency(%q<aws-sdk>, [">= 1.5.0"])
-    s.add_dependency(%q<browsercms>, ["< 3.6.0", ">= 3.5.0.rc1"])
+    s.add_dependency(%q<browsercms>, ["< 4.1.0", ">= 3.5.0.rc1"])
   end
 end
