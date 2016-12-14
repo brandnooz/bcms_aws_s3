@@ -10,7 +10,10 @@ module BcmsS3
     config.before_configuration do
       s3_config_file = "#{Rails.root}/config/s3.yml"
       if File.exists?(s3_config_file)
-        config.cms.attachments.s3_credentials = "#{Rails.root}/config/s3.yml"
+        settings = YAML.load(File.read(s3_config_file))
+        config.cms.attachments.s3_credentials = settings[:s3_credentials]
+        config.cms.attachments.s3_host_alias = settings[:s3_host_alias]
+        config.cms.attachments.url = settings[:url]
       end
       config.cms.attachments.storage = :s3 
     end
